@@ -1,0 +1,31 @@
+﻿@model MVCCore.Models.EmployeeInfo
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employee Information</h4>
+    <hr/>
+    <dl class="d-lg-none">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name) :  @Html.DisplayFor(model => model.Name)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender) :  @Html.DisplayFor(model => model.Gender)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Company) : @Html.DisplayFor(model => model.Company)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Department) : @Html.DisplayFor(model => model.Department)
+        </dt>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a>
+    <a asp-action="Index"> Back to List</a>
+</div>
+

@@ -1,0 +1,33 @@
+﻿
+@model MVCCore.Models.EmployeeInfo
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<div>
+    <h4>Employee Information</h4>
+    <hr />
+    <dl class="d-lg-none">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name) :  @Html.DisplayFor(model => model.Name)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender) :  @Html.DisplayFor(model => model.Gender)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Company) : @Html.DisplayFor(model => model.Company)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Department) : @Html.DisplayFor(model => model.Department)
+        </dt>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index"> Back to List</a>
+    </form>
+</div>
+
+
